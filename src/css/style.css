@@ -1,0 +1,40 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: EmbDigital;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8 repeat scroll 0 0;
+}
+
+.ui-content {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ui-page {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+    display: table;
+}
+
+@font-face {
+    font-family: EmbDigital;
+    src: url(../../asset/EmbDigital.ttf);
+    font-weight: bold;
+}
+
+/*
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url(../../asset/ComicSansMS.ttf);
+    font-weight: 800;
+}*/
