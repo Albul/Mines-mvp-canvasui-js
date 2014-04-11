@@ -1,0 +1,1 @@
+java -jar compiler.jar --js utils.js --js model/model-game.js --js view\view-game.js --js view\view-menu.js --js presenter\presenter-game.js --js presenter\presenter-menu.js --js main.js --js_output_file mines.min.js --formatting PRETTY_PRINT
