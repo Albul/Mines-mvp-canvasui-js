@@ -339,7 +339,10 @@ if (typeof mines.view == "undefined" || !mines.view)
             PADDING = 22,
             HEIGHT = 50,
             width = 0,
-            grd;
+            grd,
+            userAgent,
+            isFF,
+            baseLine;
 
         //--------------------------------------------------------------------------
         //  Private methods
@@ -358,6 +361,10 @@ if (typeof mines.view == "undefined" || !mines.view)
             context.roundRect(x, y, width, HEIGHT, 8, true, true);
         };
 
+        var check = function(r) {
+            return r.test(userAgent);
+        };
+
         //--------------------------------------------------------------------------
         //  Public methods
         //--------------------------------------------------------------------------
@@ -367,7 +374,7 @@ if (typeof mines.view == "undefined" || !mines.view)
             drawRect();
             context.font = FONT;
             context.textAlign = "left";
-            context.textBaseline = "top";
+            context.textBaseline = baseLine;
             context.fillStyle = '#00A000';
             context.fillText(strTime, x + PADDING, y);
             context.restore();
@@ -378,6 +385,14 @@ if (typeof mines.view == "undefined" || !mines.view)
         grd = context.createLinearGradient(x, y, x, y + HEIGHT);
         grd.addColorStop(0, '#fcfcfc');
         grd.addColorStop(1, '#e1dfde');
+        // Bug in Firefox! textBaseLine displays doesn't correct
+        userAgent = navigator.userAgent.toLowerCase();
+        isFF = check(/firefox/);
+        if (isFF) {
+            baseLine = 'middle';
+        } else {
+            baseLine = 'top';
+        }
         this.updateTime('00:00');
     };
 })();
