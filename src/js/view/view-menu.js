@@ -250,7 +250,7 @@ if (typeof mines.view == "undefined" || !mines.view)
             self.lTextAbout = new Label("Author: Albul Alexandr © special for", self.canvas.width,
                 currentY += BUTTON_HEIGHT + PADDING * 2, 'bold 26px "Comic Sans MS"');
             self.lTextAbout.lineWidth = 2;
-            self.bSite = new Button("www.as3.com.ua", self.canvas.width, currentY += BUTTON_HEIGHT + PADDING, 0, BUTTON_HEIGHT);
+            self.bSite = new Button("gamecook.org", self.canvas.width, currentY += BUTTON_HEIGHT + PADDING, 0, BUTTON_HEIGHT);
             self.bBackAbout = new Button("Назад", self.canvas.width, currentY += BUTTON_HEIGHT + PADDING, 0, BUTTON_HEIGHT);
 
             // Records page
